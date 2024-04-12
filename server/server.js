@@ -44,5 +44,7 @@ app.post("/notes", notesController.createNote);
 app.put("/notes/:id", notesController.updateNote);
 app.delete("/notes/:id", notesController.deleteNote);
 
+// Add requireAuth after login works: https://www.youtube.com/watch?v=jcckC--ibmM&list=PL-LRDpVN2fZA-1igOQ6PDcqfBjS-vaC7w&index=7
+
 // Start our server
 app.listen(process.env.PORT);
