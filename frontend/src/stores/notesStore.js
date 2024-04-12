@@ -17,9 +17,8 @@ const notesStore = create((set) => ({
 
   fetchNotes: async () => {
     // Fetch the notes
-    const res = await axios.get(
-      "https://project-mern-crud-notes.onrender.com/notes"
-    );
+    const res = await axios.get("http://localhost:3000/notes");
+    // const res = await axios.get("https://project-mern-crud-notes.onrender.com/notes");
     // Set to State
     set({ notes: res.data.notes });
     // console.log(res);
@@ -43,10 +42,8 @@ const notesStore = create((set) => ({
 
     // Create the note
     const { createForm, notes } = notesStore.getState();
-    const res = await axios.post(
-      "https://project-mern-crud-notes.onrender.com/notes",
-      createForm
-    );
+    const res = await axios.post("http://localhost:3000/notes");
+    // const res = await axios.post("https://project-mern-crud-notes.onrender.com/notes", createForm);
 
     // Update state
     set({
@@ -60,9 +57,8 @@ const notesStore = create((set) => ({
 
   deleteNote: async (_id) => {
     // Delete the note
-    const res = await axios.delete(
-      `https://project-mern-crud-notes.onrender.com/notes/${_id}`
-    );
+    const res = await axios.delete(`http://localhost:3000/notes/${_id}`);
+    // const res = await axios.delete(`https://project-mern-crud-notes.onrender.com/notes/${_id}`);
     const { notes } = notesStore.getState();
     // console.log(res);
 
@@ -110,13 +106,11 @@ const notesStore = create((set) => ({
     } = notesStore.getState();
 
     // Send the update request
-    const res = await axios.put(
-      `https://project-mern-crud-notes.onrender.com/notes/${_id}`,
-      {
-        title,
-        body,
-      }
-    );
+    const res = await axios.put(`http://localhost:3000/notes/${_id}`, {
+      // const res = await axios.put(`https://project-mern-crud-notes.onrender.com/notes/${_id}`, {
+      title,
+      body,
+    });
     console.log(res);
 
     // update state
