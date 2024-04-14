@@ -31,3 +31,8 @@ On the frontend, React.js is utilized to create an interactive user interface fo
 - **Frontend**: React.js, React Router
 - **Backend**: Express.js, MongoDB, Mongoose
 - **Additional Dependencies**: dotenv, cors, cookie-parser
+
+## Deployment
+
+- **Frontend**: https://project-mern-crud-notes-1.onrender.com
+- **Backend**: https://project-mern-crud-notes.onrender.com
